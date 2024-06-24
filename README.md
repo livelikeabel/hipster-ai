@@ -62,6 +62,7 @@ Before you begin, ensure you have met the following requirements:
    ```
 
 5. **Create a Virtual Environment**
+   // TODO: update to using pyenv-virtualenv
 
    ```bash
    python -m venv venv
