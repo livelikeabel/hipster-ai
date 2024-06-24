@@ -78,15 +78,10 @@ Before you begin, ensure you have met the following requirements:
      .\venv\Scripts\activate
      ```
 
-7. **Upgrade pip**
+7. **Install Dependencies**
 
    ```bash
    pip install --upgrade pip
-   ```
-
-8. **Install Dependencies**
-
-   ```bash
    pip install -r requirements.txt
    ```
 
