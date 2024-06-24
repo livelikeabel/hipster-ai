@@ -8,6 +8,7 @@ Welcome to sophiabel.ai project! This project uses `crewAI`, a flexible and powe
 - [Installation](#installation)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+- [Usage](#usage)
 - [Updating Dependencies](#updating-dependencies)
 
 ## Introduction
@@ -26,29 +27,79 @@ Before you begin, ensure you have met the following requirements:
 ### Setup
 
 1. **Install pyenv**
+
    ```bash
    curl https://pyenv.run | bash
    ```
 
-**Create vertual environment**
+2. **Configure pyenv**
+   Add the following lines to your `~/.bashrc` or `~/.zshrc` file:
 
-```bash
-python -m venv venv
-```
+   ```bash
+   export PYENV_ROOT="$HOME/.pyenv"
+   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+   eval "$(pyenv init --path)"
+   eval "$(pyenv init -)"
+   eval "$(pyenv virtualenv-init -)"
+   ```
 
-**Activate vertual environment**
+   Reload your shell configuration:
 
-```bash
-source venv/bin/activate
-pip install --upgrade pip
-pip install requirements.txt
-```
+   ```bash
+   exec "$SHELL"
+   ```
 
-**When you add new packages**
+3. **Install Python Version**
 
-```bash
-pip freeze > requirements.txt
-```
+   ```bash
+   pyenv install 3.10.12
+   pyenv global 3.10.12
+   ```
+
+4. **Create a Virtual Environment**
+
+   ```bash
+   python -m venv venv
+   ```
+
+5. **Activate the Virtual Environment**
+
+   - **macOS/Linux**:
+     ```bash
+     source venv/bin/activate
+     ```
+   - **Windows**:
+     ```bash
+     .\venv\Scripts\activate
+     ```
+
+6. **Upgrade pip**
+
+   ```bash
+   pip install --upgrade pip
+   ```
+
+7. **Install Dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+To run the project, follow these steps:
+
+1. **Activate the virtual environment** (if not already activated):
+
+   ```bash
+   source venv/bin/activate  # macOS/Linux
+   .\venv\Scripts\activate  # Windows
+   ```
+
+2. **Run your script or application**
+   ```bash
+   python main.py
+   ```
 
 ## Updating Dependencies
 
@@ -68,3 +119,5 @@ If you install new packages, remember to update the `requirements.txt` file to i
    ```
 
 By following these steps, you can keep the `requirements.txt` file up-to-date and ensure that all dependencies are properly managed.
+
+Thank you for using sophiabel.ai project!
