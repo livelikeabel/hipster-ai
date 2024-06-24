@@ -53,16 +53,21 @@ Before you begin, ensure you have met the following requirements:
 
    ```bash
    pyenv install 3.10.12
-   pyenv global 3.10.12
    ```
 
-4. **Create a Virtual Environment**
+4. **Set Local Python Version**
+
+   ```bash
+   pyenv local 3.10.12
+   ```
+
+5. **Create a Virtual Environment**
 
    ```bash
    python -m venv venv
    ```
 
-5. **Activate the Virtual Environment**
+6. **Activate the Virtual Environment**
 
    - **macOS/Linux**:
      ```bash
@@ -73,13 +78,13 @@ Before you begin, ensure you have met the following requirements:
      .\venv\Scripts\activate
      ```
 
-6. **Upgrade pip**
+7. **Upgrade pip**
 
    ```bash
    pip install --upgrade pip
    ```
 
-7. **Install Dependencies**
+8. **Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
